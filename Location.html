@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Libraries</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet"href="assets\style\nav.css">
+  <!-- <link rel="stylesheet"href="style.css"> -->
+
+
+  <style>
+
+
+
+     .hero{ background: url('assets/img/tess4.jpeg') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #0097b2;
+    }
+    .hero p {
+      font-size: 1.8rem;
+      color: #59595b;
+    }
+    .hero #detectLocation{
+      background-color: #0097b2;
+      color: #fff;
+      border: none;
+      padding: 20px 30px;
+      font-size: 18px;
+    }
+    /* الكروت */
+    #bookstoreList .card {
+      background-color: #f2e9e4;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #bookstoreList .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    #bookstoreList .card-title{
+      color: #E65100;
+    }
+    #bookstoreList .card-text strong{
+      color: #e65100;
+    }
+    #bookstoreList .card-text {
+      color: #59595b;
+    }
+    #bookstoreList .btn{
+      background-color: #0097b2;
+      color: #fff;
+      border: none !important;
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .input-group.SearchInput input:focus{
+      box-shadow: 0 0 5px #0097b2  !important;
+      border: #0097b2 !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- Logo on the left -->
+      <a class="navbar-brand" href="#"><img src="assets\img\logo7.png" style="height: 50px; width:200px; z-index: 1000; " ></a>
+  
+      <!-- Toggle button for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar content with items centered in larger screens -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left and center links, ensure these are centered -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="about.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Location.html">Libraries</a>
+          </li>
+        
+           <!-- Add Join Us link -->
+           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="RegisterLibrary.html">Join Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contactus.html">Contact us</a>
+          </li>
+         
+          <!-- Add Terms and Conditions link -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Terms&Conditions.html">Terms & Conditions</a>
+          </li>
+        </ul>
+  
+        <!-- Right side (Cart, Sign In, Profile) -->
+        <ul class="navbar-nav d-flex justify-content-center mb-2 mb-lg-0 right-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-shopping-cart" style="font-size: 24px;  margin-top: 7px; display: none;"></i> <!-- Cart Icon -->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="assets\img\avatar.jpg" alt="Profile" class="rounded-circle" style="width: 35px; height: 35px; display: none;"> <!-- Profile Image -->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">
+              <button class="btn btn-outline-primary" id="signInBtn" style="font-size:18px; color: #eee;">Sign In</button> 
+            </a>
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </nav>
+  
+  <!-- قسم الهيرو -->
+  <section class="hero text-center">
+    <div>
+      <h1>Discover Local Bookstores</h1>
+      <p>Find the best bookstores near you with just one click!</p>
+      <button id="detectLocation" class="btn btn-light px-4 py-2 mt-3">Detect Nearest Libraries</button>
+    </div>
+  </section>
+
+  <!-- عرض المكتبات -->
+  <div class="container py-5">
+    <div class="mb-4">
+      <h2 class="section-title">All Libraries</h2>
+      <div class="container mt-3">
+        <div class="input-group SearchInput">
+            <input type="text" class="form-control" placeholder="Find library.." aria-label="search" aria-describedby="search-btn"  >
+            <button class="btn btn-primary" type="button" id="search-btn" style="background: #0097b2!important; border:none!important;">Search</button>
+        </div>
+    </div>
+    
+    </div>
+    <div id="bookstoreList" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+  </div>
+        <!-- Footer Section -->
+<div class="container my-5">
+  <footer class="bg-dark text-center text-lg-start text-white py-5">
+    <div class="container p-4">
+      <div class="row justify-content-center my-4">
+        <!-- Logo Section -->
+      <div class="row"> <!-- إضافة صف لتوزيع الأعمدة -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
+          <img src="assets\img\logo3.png" alt="Logo" loading="lazy" style="width: 250px; margin-bottom: 20px;" />
+          <p>Your platform for local bookstores and stationery.</p>
+          <ul class="list-unstyled d-flex flex-row justify-content-center mt-3">
+            <li><a class="text-white px-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a class="text-white px-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a></li>
+            <li><a class="text-white ps-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- Shop Categories -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Shop Categories</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-book pe-3"></i>Books</a></li>
+            <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-pencil-alt pe-3"></i>Stationery</a></li>
+            <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-cart-plus pe-3"></i>Shop Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Customer Service</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-truck pe-3"></i>Delivery Info</a></li>
+            <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-phone pe-3"></i>Contact Us</a></li>
+            <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-question-circle pe-3"></i>FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Contact</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-map-marker-alt pe-2"></i>Irbid, Jordan</li>
+            <li class="mb-2"><i class="fas fa-phone pe-2"></i>+123 456 789</li>
+            <li><i class="fas fa-envelope pe-2"></i>StationerySpot@Stationery.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center py-3" style="background-color: rgba(0, 0, 0, 0.2); font-size: 0.9rem;">
+      © 2025 Copyright: 
+      <a href="#!" class="text-white" style="text-decoration: none;">Stationery Spot</a>
+    </div>
+  </footer>
+</div>
+
+  <script>
+    // بيانات المكتبات (يمكنك تعديلها أو إضافة بيانات حقيقية من قاعدة بيانات)
+    const bookstores = [
+      { id: 1, name: "City Bookstore", address: "329 Main St", latitude: 40.748817, longitude: -73.985428, image:"assets/img/library3.jpg" },
+      { id: 2, name: "Library Corner", address: "654 Library Ave", latitude: 40.742674, longitude: -73.987118, image:"assets/img/library1.jpg" },
+      { id: 3, name: "Book Haven", address: "987 Book Blvd", latitude: 40.752774, longitude: -73.982779, image:"assets/img/library2.jpg" },
+      {id: 4, name: "City Bookstore", address: "329 Main St", latitude: 40.748817, longitude: -73.985428, image:"assets/img/library4.jpg" },
+      { id: 5, name: "Library Corner", address: "654 Library Ave", latitude: 40.742674, longitude: -73.987118, image:"assets/img/library5.jpg" },
+      { id: 6, name: "Book Haven", address: "987 Book Blvd", latitude: 40.752774, longitude: -73.982779, image:"assets/img/test3.jpg" },
+    ];
+  
+
+    const bookstoreList = document.getElementById('bookstoreList');
+    const detectLocationBtn = document.getElementById('detectLocation');
+
+   
+
+    // دالة لعرض المكتبات
+    function displayBookstores(filteredBookstores) {
+      bookstoreList.innerHTML = '';
+      filteredBookstores.forEach(store => {
+        const colDiv = document.createElement('div');
+        colDiv.classList.add('col');
+        
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('card');
+        
+        const img = document.createElement('img');
+        img.src = store.image;
+        img.alt = store.name;
+        img.classList.add('card-img-top');
+        
+        const cardBodyDiv = document.createElement('div');
+        cardBodyDiv.classList.add('card-body');
+        
+        const title = document.createElement('h5');
+        title.classList.add('card-title');
+        title.textContent = store.name;
+        
+        const addressPara = document.createElement('p');
+        addressPara.classList.add('card-text');
+        addressPara.innerHTML = `<strong>Address:</strong> ${store.address}`;
+        
+        const btn = document.createElement('a');
+        btn.classList.add('btn', 'btn-primary', 'btn-sm');
+        btn.textContent = 'View Details';
+        btn.href="Library.html";
+        
+        cardBodyDiv.appendChild(title);
+        cardBodyDiv.appendChild(addressPara);
+        cardBodyDiv.appendChild(btn);
+        
+        cardDiv.appendChild(img);
+        cardDiv.appendChild(cardBodyDiv);
+        
+        colDiv.appendChild(cardDiv);
+        bookstoreList.appendChild(colDiv);
+      });
+    }
+
+    // دالة لاكتشاف موقع المستخدم
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          const userLat = position.coords.latitude;
+          const userLon = position.coords.longitude;
+
+          // تصفية المكتبات بناءً على المسافة
+          const sortedBookstores = bookstores.map(store => {
+            const distance = calculateDistance(userLat, userLon, store.latitude, store.longitude);
+            return { ...store, distance };
+          }).sort((a, b) => a.distance - b.distance); // ترتيب المكتبات حسب المسافة
+
+          // عرض المكتبات القريبة
+          displayBookstores(sortedBookstores);
+        }, (error) => {
+          alert("Unable to retrieve your location. Please enable geolocation.");
+        });
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+
+    // عند الضغط على زر اكتشاف الموقع
+    detectLocationBtn.addEventListener('click', getLocation);
+
+    // عرض جميع المكتبات بشكل افتراضي
+    displayBookstores(bookstores);
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

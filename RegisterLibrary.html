@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stationery Store Hero Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"href="assets\style\nav.css">
+    <link rel="stylesheet"href="assets\style\joinUs.css">
+
+
+   
+</head>
+<body>
+    <!-- navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- Logo on the left -->
+      <a class="navbar-brand" href="#"><img src="assets\img\logo7.png" style="height: 50px; width:200px; z-index: 1000; " ></a>
+  
+      <!-- Toggle button for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar content with items centered in larger screens -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left and center links, ensure these are centered -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="about.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Location.html">Libraries</a>
+          </li>
+        
+           <!-- Add Join Us link -->
+           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="RegisterLibrary.html">Join Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contactus.html">Contact us</a>
+          </li>
+         
+          <!-- Add Terms and Conditions link -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Terms&Conditions.html">Terms & Conditions</a>
+          </li>
+        </ul>
+  
+        <!-- Right side (Cart, Sign In, Profile) -->
+        <ul class="navbar-nav d-flex justify-content-center mb-2 mb-lg-0 right-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-shopping-cart" style="font-size: 24px;  margin-top: 7px; display: none;"></i> <!-- Cart Icon -->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <img src="assets\img\avatar.jpg" alt="Profile" class="rounded-circle" style="width: 35px; height: 35px; display: none;"> <!-- Profile Image -->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">
+              <button class="btn btn-outline-primary" id="signInBtn" style="font-size:18px; color: #eee;">Sign In</button> 
+            </a>
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </nav>
+      
+  
+  
+        <section class="hero-section">
+            <div class="hero-video-container">
+              <video autoplay loop muted>
+                <source src="assets/video/6334052-uhd_4096_2160_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          
+            <div class="hero-content-overlay">
+                <div class="hero-content">
+                  <h2 >Join the Largest Platform for Local Libraries and Expand Your Reach</h2>
+                  <p>It's time to make your library part of a unique shopping experience. Gain access to new customers, boost your sales, and become part of a growing network of libraries.</p>
+              
+                  <div class="cta-buttons">
+                    <a href="#signup-form" class="cta-btn">Join Now</a>
+                    <a href="#about" class="cta-btn secondary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              
+          </section>
+          <!-- About 1 - Bootstrap Brain Component -->
+          <section class="py-3 py-md-5" style="margin-top: 20px;" id="about">
+            <div class="container">
+                <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+                    <div class="col-12 col-lg-6 col-xl-5">
+                        <img class="img-fluid rounded" loading="lazy" src="assets\img\aboutpic.jpg" alt="About 1">
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-7">
+                        <div class="row justify-content-xl-center">
+                            <div class="col-12 col-xl-11">
+                                <h2 class="mb-3">Who Are We?</h2>
+                                <p class="lead fs-4 text-secondary mb-3">
+                                    We are a platform dedicated to connecting local libraries with a broader community. Our mission is to help libraries expand their reach, increase their visibility, and enhance their offerings by connecting them with new customers online.
+                                </p>
+                                <p class="mb-5 text-secondary">
+                                    We offer a unique platform where local libraries can showcase their collections, offer products, and connect with a growing network of customers. We believe in collaboration, innovation, and customer satisfaction, and we are constantly working to improve the services we provide to libraries and their patrons.
+                                </p>
+        
+                                <!-- New Section: How We Earn -->
+                                <h2 class="mb-3">How We Earn ?</h2>
+                                <p class="text-secondary">
+                                    Our platform operates on a commission-based model, ensuring that libraries can list their products with no upfront costs. We take a small commission of 15% on each successful transaction, allowing us to maintain and improve the platform while providing the best service to both libraries and customers.
+                                </p>
+                                <p class="text-secondary">
+                                    Libraries receive their earnings directly to their preferred payment method, with transparent reporting and no hidden fees.
+                                </p>
+        
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="how-it-works py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">How It Works</h2>
+                <div class="row align-items-center justify-content-center text-center">
+                    <!-- Step 1 -->
+                    <div class="col-md-2 mb-4 mb-md-0">
+                        <div class="step-icon mb-3">
+                            <i class="fas fa-user-plus fa-3x"></i>
+                        </div>
+                        <h3 class="h4 text-uppercase text-dark">Sign Up</h3>
+                        <p>Quick and easy registration to get started.</p>
+                    </div>
+        
+                    <!-- Arrow -->
+                    <div class="col-md-1 d-flex justify-content-center align-items-center mb-4 mb-md-0">
+                        <img src="assets/img/arrow.png" alt="Arrow" class="w-50" style="filter:invert(38%) sepia(98%) saturate(6354%) hue-rotate(355deg) brightness(93%) contrast(106%);">
+                    </div>
+        
+                    <!-- Step 2 -->
+                    <div class="col-md-2 mb-4 mb-md-0">
+                        <div class="step-icon mb-3">
+                            <i class="fas fa-book fa-3x"></i>
+                        </div>
+                        <h3 class="h4 text-uppercase text-dark">List Your Library</h3>
+                        <p>Showcase your books and services on our platform.</p>
+                    </div>
+        
+                    <!-- Arrow -->
+                    <div class="col-md-1 d-flex justify-content-center align-items-center mb-4 mb-md-0">
+                        <img src="assets/img/arrow.png" alt="Arrow" class="w-50" style="filter:invert(38%) sepia(98%) saturate(6354%) hue-rotate(355deg) brightness(93%) contrast(106%);">
+                    </div>
+        
+                    <!-- Step 3 -->
+                    <div class="col-md-2 mb-4 mb-md-0">
+                        <div class="step-icon mb-3">
+                            <i class="fas fa-tags fa-3x"></i>
+                        </div>
+                        <h3 class="h4 text-uppercase text-dark">Start Selling</h3>
+                        <p>Connect with customers and boost your sales.</p>
+                    </div>
+        
+                    <!-- Arrow -->
+                    <div class="col-md-1 d-flex justify-content-center align-items-center mb-4 mb-md-0">
+                        <img src="assets/img/arrow.png" alt="Arrow" class="w-50" style="filter:invert(38%) sepia(98%) saturate(6354%) hue-rotate(355deg) brightness(93%) contrast(106%);">
+                    </div>
+        
+                    <!-- Step 4 (New) -->
+                    <div class="col-md-2 mb-4 mb-md-0">
+                        <div class="step-icon mb-3">
+                            <i class="fas fa-wallet fa-3x"></i>
+                        </div>
+                        <h3 class="h4 text-uppercase text-dark">Get Paid</h3>
+                        <p>Receive your earnings directly to your account, with a small commission deducted.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h1 class="text-center" style="margin: 15px auto;">What Local Libraries Are Saying About Stationery Spot</h1>
+
+        <section class="p-4 p-md-5 text-center text-lg-start shadow-1-strong rounded" style="background-image: url('download (1).jpg'); background-repeat:no-repeat; background-size:cover;">
+            <div class="row d-flex justify-content-center Testimonial-Library">
+                <div class="col-md-10">
+                    <!-- Testimonial Slider -->
+                    <div id="testimonialSlider" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Testimonial 1 -->
+                            <div class="carousel-item active">
+                                <div class="card">
+                                    <div class="card-body m-3">
+                                        <div class="row">
+                                            <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                                                <img src="assets/img/slide222.jpeg" class="rounded-circle img-fluid shadow-1" alt="Library avatar" width="200" height="200" />
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <p class="text-muted fw-light mb-4">
+                                                    "Stationery Spot has truly helped our library expand its reach. The process was seamless, and our sales have increased significantly since joining."
+                                                </p>
+                                                <p class="fw-bold lead mb-2"><strong>City Library</strong></p>
+                                                <p class="fw-bold text-muted mb-0">Library Owner</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div class="carousel-item ">
+                                <div class="card">
+                                    <div class="card-body m-3">
+                                        <div class="row">
+                                            <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                                                <img src="assets\img\test1.jpg" class="rounded-circle img-fluid shadow-1" alt="Library avatar" width="200" height="200" />
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <p class="text-muted fw-light mb-4">
+                                                    "We are thrilled with the visibility Stationery Spot has given us. It's a fantastic platform for libraries to reach new customers."
+                                                </p>
+                                                <p class="fw-bold lead mb-2"><strong>Maplewood Library</strong></p>
+                                                <p class="fw-bold text-muted mb-0">Library Owner</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial 3 -->
+                            <div class="carousel-item">
+                                <div class="card">
+                                    <div class="card-body m-3">
+                                        <div class="row">
+                                            <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                                                <img src="assets\img\test5.jpg" class="rounded-circle img-fluid shadow-1" alt="Library avatar" width="200" height="200" />
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <p class="text-muted fw-light mb-4">
+                                                    "As a local library, it’s been hard to reach customers beyond our neighborhood, but Stationery Spot has bridged that gap effortlessly."
+                                                </p>
+                                                <p class="fw-bold lead mb-2"><strong>Sunrise Library</strong></p>
+                                                <p class="fw-bold text-muted mb-0">Library Owner</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialSlider" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialSlider" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+          <section id="join-us" class="join-us py-5" style="background-color: #f8f9fa;">
+            <div class="container text-center">
+              <h2 class="display-4 mb-4">Why Join Us?</h2>
+              <p class="lead mb-4">
+                Showcase your library on our platform, attract more customers, and start boosting your sales.
+              </p>
+              <div class="row justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                  <div class="card shadow-sm">
+                    <div class="card-body">
+                      <i class="fas fa-users fa-3x mb-3"></i>
+                      <h5 class="card-title">Increase Customers</h5>
+                      <p class="card-text">
+                        Display your books to a wide range of new customers and gain more interaction.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                  <div class="card shadow-sm">
+                    <div class="card-body">
+                      <i class="fas fa-chart-line fa-3x mb-3"></i>
+                      <h5 class="card-title">Boost Sales</h5>
+                      <p class="card-text">
+                        Reach a larger audience and significantly increase your sales through our platform.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-4">
+                  <div class="card shadow-sm">
+                    <div class="card-body">
+                      <i class="fas fa-cogs fa-3x mb-3"></i>
+                      <h5 class="card-title">Easy Management</h5>
+                      <p class="card-text">
+                        Enjoy an easy-to-use dashboard for seamless management of your books and services.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </section>
+<!--Registration Form-->
+<section class="signup-form py-5" style="position: relative;"id="signup-form">
+ 
+    <div class="background-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('assets/img/university-library-4825366_1280.jpg'); background-size: cover;  z-index: -1;"></div>
+    <h2 class="display-4 text-white mb-4 text-center">Register Your Library</h2>
+
+    <div class="container d-flex justify-content-center align-items-center" style="position: relative; z-index: 1; margin: auto!important; ">
+     
+      <form  style="background-color: rgba(0, 0, 0, 0.33); backdrop-filter: blur(3px); padding: 20px; border-radius: 10px;">
+        <!-- Basic Information -->
+        <div class="form-group ">
+          <label for="libraryName" class="text-white">Library Name</label>
+          <input type="text" class="form-control " id="libraryName" placeholder="Enter Library Name" required>
+        </div>
+        <div class="form-group">
+          <label for="libraryEmail" class="text-white">Email</label>
+          <input type="email" class="form-control" id="libraryEmail" placeholder="Enter Email" required>
+        </div>
+        <div class="form-group">
+          <label for="libraryPhone" class="text-white ">Phone Number</label>
+          <input type="tel" class="form-control" id="libraryPhone" placeholder="Enter Phone Number" required>
+        </div>
+        <div class="form-group">
+          <label for="libraryAddress" class="text-white ">Library Address</label>
+          <input type="text" class="form-control" id="libraryAddress" placeholder="Enter Library Address" required>
+        </div>
+        
+        <!-- Specialties / Services -->
+        <div class="form-group">
+          <label for="librarySpecialties" class="text-white">What does your library specialize in?</label>
+          <input type="text" class="form-control" id="librarySpecialties" placeholder="Enter Specialties or Services" required>
+        </div>
+        
+        
+        <!-- Extra Services or Special Offers -->
+        <div class="form-group">
+          <label for="specialOffers" class="text-white " >Any special offers or additional services?</label>
+          <textarea class="form-control" id="specialOffers" rows="9"  placeholder="Tell us about any special offers" style="width: 800px !important;"></textarea>
+        </div>
+  
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg" style="padding: 20px !important; background: #0097B2; border: #0097B2;">
+              Submit Registration
+            </button>
+          </div>      </form>
+    </div>
+  </section>
+  <!-- FAQ -->
+  
+  <div class="row faq-container pt-md-0">
+    <div class="col-12 col-md-4">
+        <h6>Popular Questions</h6>
+    </div>
+    <div class="col-12 col-md-8">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  How can I register my library?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  You can register your library by clicking on the "Join Us" button and filling out the required form. Once reviewed, we will notify you of approval.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Are there any subscription fees?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  No, joining the platform is free. However, a small commission is applied to successful transactions.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  How do I receive payments?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Payments are transferred to your bank account at the end of each transaction cycle.
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- libraries -->
+ <section class="libraries py-5">
+    <h2 class="font-weight-bold mb-4" style="color:#0097b2; margin-left:10px;">Our Partnered Libraries</h2>
+  
+    <div class="container-fluid ">
+      <!-- Carousel Wrapper -->
+      <div id="libraryCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4 col-12 mb-4 text-center">
+                <div class="stat-card">
+                  <img src="assets\img\ITOYA_ El paraíso de papelería en Japón.jpg" alt="Library 1" class="img-fluid rounded-circle mb-3">
+                  <h5>Central Library</h5>
+                  <p class="text-muted">Located in the heart of the city, offering a wide selection of books across various genres.</p>
+                  <a href="library.html" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+              </div>
+              <div class="col-md-4 col-12 mb-4 text-center">
+                <div class="stat-card">
+                  <img src="assets\img\tess.jpeg" alt="Library 2" class="img-fluid rounded-circle mb-3">
+                  <h5>City Library</h5>
+                  <p class="text-muted">A quiet place to read, study, and explore new ideas.</p>
+                  <a href="library.html" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+              </div>
+              <div class="col-md-4 col-12 mb-4 text-center">
+                <div class="stat-card">
+                  <img src="assets\img\tess2.jpeg" alt="Library 3" class="img-fluid rounded-circle mb-3">
+                  <h5>University Library</h5>
+                  <p class="text-muted">A hub for academic resources and research material.</p>
+                  <a href="library.html" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4 col-12 mb-4 text-center">
+                <div class="stat-card">
+                  <img src="assets\img\test5.jpg" alt="Library 4" class="img-fluid rounded-circle mb-3">
+                  <h5>Modern Library</h5>
+                  <p class="text-muted">Featuring the latest books and digital resources.</p>
+                  <a href="library.html" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+              </div>
+              <!-- مكتبة 5 -->
+              <div class="col-md-4 col-12 mb-4 text-center">
+                <div class="stat-card">
+                  <img src="assets\img\test1.jpg" alt="Library 5" class="img-fluid rounded-circle mb-3">
+                  <h5>Community Library</h5>
+                  <p class="text-muted">A local library serving the neighborhood with educational resources.</p>
+                  <a href="library.html" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+              </div>
+              <div class="col-md-4 col-12 mb-4 text-center">
+                <div class="stat-card">
+                  <img src="assets/img/slide222.jpeg" alt="Library 6" class="img-fluid rounded-circle mb-3">
+                  <h5>Public Library</h5>
+                  <p class="text-muted">Offering a wide selection of books for all ages.</p>
+                  <a href="library.html" class="btn btn-outline-primary mt-3">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+       
+        <button class="carousel-control-prev" type="button" data-bs-target="#libraryCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#libraryCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+   
+      <!-- Footer Section -->
+<div class="container my-5">
+    <footer class="bg-dark text-center text-lg-start text-white py-5">
+      <div class="container p-4">
+        <div class="row justify-content-center my-4">
+          <!-- Logo Section -->
+        <div class="row"> <!-- إضافة صف لتوزيع الأعمدة -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
+            <img src="assets\img\logo3.png" alt="Logo" loading="lazy" style="width: 250px; margin-bottom: 20px;" />
+            <p>Your platform for local bookstores and stationery.</p>
+            <ul class="list-unstyled d-flex flex-row justify-content-center mt-3">
+              <li><a class="text-white px-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a class="text-white px-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a></li>
+              <li><a class="text-white ps-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+  
+          <!-- Shop Categories -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Shop Categories</h5>
+            <ul class="list-unstyled">
+              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-book pe-3"></i>Books</a></li>
+              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-pencil-alt pe-3"></i>Stationery</a></li>
+              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-cart-plus pe-3"></i>Shop Now</a></li>
+            </ul>
+          </div>
+  
+          <!-- Customer Service -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Customer Service</h5>
+            <ul class="list-unstyled">
+              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-truck pe-3"></i>Delivery Info</a></li>
+              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-phone pe-3"></i>Contact Us</a></li>
+              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-question-circle pe-3"></i>FAQ</a></li>
+            </ul>
+          </div>
+  
+          <!-- Contact -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Contact</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-map-marker-alt pe-2"></i>Irbid, Jordan</li>
+              <li class="mb-2"><i class="fas fa-phone pe-2"></i>+123 456 789</li>
+              <li><i class="fas fa-envelope pe-2"></i>StationerySpot@Stationery.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Footer Bottom -->
+      <div class="text-center py-3" style="background-color: rgba(0, 0, 0, 0.2); font-size: 0.9rem;">
+        © 2025 Copyright: 
+        <a href="#!" class="text-white" style="text-decoration: none;">Stationery Spot</a>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
+
+          
+</body>
+</html>

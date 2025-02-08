@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet"href="assets\style\nav.css">
+
+   <style>
+    .item-info h3{
+        color: #007a8e;
+    }
+    .item-info p ,.item-info span{
+        color: rgb(77, 76, 76);
+    }
+    .summary-item h6{
+        margin-top: 6px; color: #E65100;font-size: 18px;
+    }
+    #payment-form .form-check-label{
+        color: #E65100;
+    }
+    #credit-card-info label{
+        color: rgb(77, 76, 76);
+    }
+   .checkout-btn .btn-success {
+    background: #007a8e;
+   }
+   #credit-card:focus, #paypal:focus{
+/* box-shadow:0 0 0 5px #007a8e ; */
+border-color: #007a8e;
+background-color: #007a8e;
+
+   }
+   #credit-card:checked, #paypal:checked{
+/* box-shadow:0 0 0 5px #007a8e ; */
+border-color: #007a8e;
+background-color: #007a8e;
+   }
+   </style>
+    
+
+
+</head>
+<body>
+      <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <!-- Logo on the left -->
+        <a class="navbar-brand" href="#"><img src="assets\img\logo7.png" style="height: 50px; width:200px; z-index: 1000; " ></a>
+    
+        <!-- Toggle button for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Navbar content with items centered in larger screens -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Left and center links, ensure these are centered -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Location.html">Libraries</a>
+            </li>
+          
+             <!-- Add Join Us link -->
+             <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="RegisterLibrary.html">Join Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contactus.html">Contact us</a>
+            </li>
+           
+            <!-- Add Terms and Conditions link -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Terms&Conditions.html">Terms & Conditions</a>
+            </li>
+          </ul>
+    
+          <!-- Right side (Cart, Sign In, Profile) -->
+          <ul class="navbar-nav d-flex justify-content-center mb-2 mb-lg-0 right-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa fa-shopping-cart" style="font-size: 24px;  margin-top: 7px; display: none;"></i> <!-- Cart Icon -->
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <img src="assets\img\avatar.jpg" alt="Profile" class="rounded-circle" style="width: 35px; height: 35px; display: none;"> <!-- Profile Image -->
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <button class="btn btn-outline-primary" id="signInBtn" style="font-size:18px; color: #eee;">Sign In</button> 
+              </a>
+            </li>
+          </ul>
+    
+        </div>
+      </div>
+    </nav>
+    
+      
+  <!-- shopping cart -->
+<section class="shopping-cart container py-5">
+    <div class="row">
+        <!-- Left Section (Cart Details) -->
+        <div class="col-md-7 mb-4">
+            <h2 style="color: #007a8e;;">Shopping Cart</h2>
+            <div class="cart-item d-flex align-items-center mb-4 p-3 border rounded shadow-sm">
+                <img src="assets\img\color3.jpg" alt="Product Image" class="img-fluid" style="width: 100px; height: 100px; object-fit: cover; margin-right: 20px;">
+                <div class="item-info">
+                    <h3>Hilighter</h3>
+                    <p>Product description goes here...</p>
+                    <span>Price: $20</span>
+                </div>
+                <div class="item-quantity mx-3">
+                    <input type="number" value="1" min="1" max="10" class="form-control" style="width: 80px;">
+                </div>
+                <div class="item-total-price">
+                    <span>Total Price: $20</span>
+                </div>
+                 <!-- زر الحذف مع أيقونة X -->
+                    <button class="btn btn-danger btn-sm ms-auto" onclick="removeItem(this)" style="border: none; background: transparent;">
+                        <i class="fas fa-times" style="color: #E65100;"></i> <!-- X icon with red color -->
+                    </button>
+
+            </div>
+            <div class="cart-item d-flex align-items-center mb-4 p-3 border rounded shadow-sm">
+                <img src="assets\img\bag2.jpg" alt="Product Image" class="img-fluid" style="width: 100px; height: 100px; object-fit: cover; margin-right: 20px;">
+                <div class="item-info">
+                    <h3>School Bag</h3>
+                    <p>Product description goes here...</p>
+                    <span>Price: $30</span>
+                </div>
+                <div class="item-quantity mx-3">
+                    <input type="number" value="2" min="1" max="10" class="form-control" style="width: 80px;">
+                </div>
+                <div class="item-total-price">
+                    <span>Total Price: $60</span>
+                </div>
+                 <!-- زر الحذف مع أيقونة X -->
+                    <button class="btn btn-danger btn-sm ms-auto" onclick="removeItem(this)" style="border: none; background: transparent;">
+                        <i class="fas fa-times" style="color: #E65100;"></i> <!-- X icon with red color -->
+                    </button>
+
+            </div>
+
+            <div class="cart-summary bg-light p-3 border rounded shadow-sm">
+                <div class="summary-item d-flex justify-content-start">
+                    <h4>Subtotal:</h4>
+                    <h6 class="mt-1 ms-2">$20</h6>
+                </div>
+                <div class="summary-item d-flex justify-content-start">
+                    <h4>Shipping:</h4>
+                    <h6 class="mt-1 ms-2">$5</h6>
+                </div>
+                <div class="summary-item d-flex justify-content-start ">
+                    <h4>Total:</h4>
+                    <h6 class=" ms-2" style="margin-top: 6px; color: #E65100;font-size: 18px;">$25</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section (Payment Info) -->
+        <div class="col-md-5">
+            <h2>Payment Information</h2>
+            <form id="payment-form">
+                <!-- Payment Method Radio Buttons -->
+                <div class="mb-3">
+                    <label class="form-label" style=" color: rgb(77, 76, 76);">Select Payment Method:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="paymentMethod" id="credit-card" value="credit-card" checked>
+                        <label class="form-check-label" for="credit-card">Credit Card</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="paymentMethod" id="paypal" value="paypal">
+                        <label class="form-check-label" for="paypal">PayPal</label>
+                    </div>
+                </div>
+
+                <!-- Credit Card Fields -->
+                <div id="credit-card-info">
+                    <div class="mb-3">
+                        <label for="credit-card-number" class="form-label">Credit Card Number:</label>
+                        <input type="text" id="credit-card-number" class="form-control" placeholder="Card Number">
+                    </div>
+                    <div class="mb-3">
+                        <label for="expiry-date" class="form-label">Expiry Date:</label>
+                        <input type="month" id="expiry-date" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cvv" class="form-label">CVV:</label>
+                        <input type="text" id="cvv" class="form-control" placeholder="CVV">
+                    </div>
+                </div>
+
+                <!-- PayPal Fields -->
+                <div id="paypal-info" class="d-none">
+                    <div class="mb-3">
+                        <label for="paypal-email" class="form-label" style=" color: rgb(77, 76, 76);">PayPal Email:</label>
+                        <input type="email" id="paypal-email" class="form-control" placeholder="PayPal Email">
+                    </div>
+                </div>
+
+                <div class="checkout-btn d-grid">
+                    <button type="submit" class="btn btn-success btn-lg">Checkout</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<div class="container my-5">
+    <footer class="bg-dark text-center text-lg-start text-white py-5">
+      <div class="container p-4">
+        <div class="row justify-content-center my-4">
+          <!-- Logo Section -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
+            <img src="assets\img\logo3.png" alt="Logo" loading="lazy" style="width: 250px; margin-bottom: 20px;" />
+            <p>Your platform for local bookstores and stationery.</p>
+            <ul class="list-unstyled d-flex flex-row justify-content-center mt-3">
+              <li><a class="text-white px-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a class="text-white px-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a></li>
+              <li><a class="text-white ps-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+  
+          <!-- Shop Categories -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Shop Categories</h5>
+            <ul class="list-unstyled">
+              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-book pe-3"></i>Books</a></li>
+              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-pencil-alt pe-3"></i>Stationery</a></li>
+              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-cart-plus pe-3"></i>Shop Now</a></li>
+            </ul>
+          </div>
+  
+          <!-- Customer Service -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Customer Service</h5>
+            <ul class="list-unstyled">
+              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-truck pe-3"></i>Delivery Info</a></li>
+              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-phone pe-3"></i>Contact Us</a></li>
+              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-question-circle pe-3"></i>FAQ</a></li>
+            </ul>
+          </div>
+  
+          <!-- Contact -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Contact</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-map-marker-alt pe-2"></i>Irbid, Jordan</li>
+              <li class="mb-2"><i class="fas fa-phone pe-2"></i>+123 456 789</li>
+              <li><i class="fas fa-envelope pe-2"></i>StationerySpot@Stationery.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Footer Bottom -->
+      <div class="text-center py-3" style="background-color: rgba(0, 0, 0, 0.2); font-size: 0.9rem;">
+        © 2025 Copyright: 
+        <a href="#!" class="text-white" style="text-decoration: none;">Stationery Spot</a>
+      </div>
+    </footer>
+  </div>
+  
+  
+<!-- Script to Toggle Payment Method Fields -->
+<script>
+    document.querySelectorAll('input[name="paymentMethod"]').forEach(function (elem) {
+        elem.addEventListener("change", function () {
+            if (document.getElementById('credit-card').checked) {
+                document.getElementById('credit-card-info').classList.remove('d-none');
+                document.getElementById('paypal-info').classList.add('d-none');
+            } else if (document.getElementById('paypal').checked) {
+                document.getElementById('paypal-info').classList.remove('d-none');
+                document.getElementById('credit-card-info').classList.add('d-none');
+            }
+        });
+    });
+
+    // Trigger change to show initial payment option (Credit Card)
+    document.querySelector('input[name="paymentMethod"]:checked').dispatchEvent(new Event('change'));
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
+
+
+</body>
+</html>
