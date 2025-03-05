@@ -7,8 +7,14 @@
     margin-top: 20px;
 }
 .Personal-Card .btn {
-    background-color: #0097B2!important;
-    border: none;
+    background-color: #ffffff;
+    border: 1px solid #fa65b1;
+    color:#fa65b1;
+}
+.Personal-Card .btn:hover {
+    background-color: #fa65b1;
+    /* border: 1px solid #fa65b1; */
+    color:#ffffff;
 }
 .modal-body .btn{
     background-color: #0097B2!important;
@@ -19,12 +25,14 @@
     box-shadow: 3px 3px 10px #0097B2;
 }
 .table-bordered .btn-danger{
-    background-color: #0097B2!important;
-    border: none;
+    background-color: #ffffff;
+    border: 1px solid #fa65b1;
+    color:#fa65b1;
 }
 .card-body .btn-success{
-    background-color: #0097B2!important;
-    border: none;
+    background-color:  #fa65b1;
+    border: 1px solid #fa65b1;
+    color:#ffffff;
 }
 /* faviorite */
 .card-body img {
@@ -44,8 +52,9 @@ font-size: 0.85rem;
 padding: 5px 10px;
 }
 .favorite-card .btn-danger{
-background-color: #E65100;
-    border: none;
+    background-color: #ffffff;
+    border: 1px solid #fa65b1;
+    color:#fa65b1;
 
 }
 .setting-card .btn{
@@ -57,6 +66,6 @@ font-size: 16px;
 
 }
 .modal-footer .btn-secondary{
-background-color: #E65100!important;
+background-color: #fa65b1!important;
 
 }

@@ -1,50 +1,65 @@
-/* تخصيص البطاقة داخل الـ Carousel */
-.libraries .container-fluid {
-    background-color: rgb(117, 209, 225);
-    /* width:80%; */
-    /* margin: auto; */
+h6 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0097B2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #0097B2, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 5px;
 }
-.libraries .stat-card{
-    background-color: #eee;
-    height: 400px!important;
-
-    
-
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fa65b1;
+  position: relative;
 }
-.carousel-item {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .carousel-item img {
-   width:150px;
-   height: 150px;
-    border-radius: 50%;
-    object-fit: cover; 
-  }
-  
-  .carousel-item h5 {
-    font-size: 1.2rem;
-    margin-top: 15px;
-    color: #E65100;
-  }
-  
-  .carousel-item p {
-    font-size: 1rem;
-    color: #6c757d;
-  }
-  
-  .carousel-item .btn {
-    border-radius: 25px;
-    padding: 10px 20px;
-    border: 2px solid #0097b2;
-    color: #0097b2;
-    background-color: transparent;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .carousel-item .btn:hover {
-    background-color: #0097b2;
-    color: #ffffff;
-  }
-  
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #fa65b1;
+  margin: 10px auto 0;
+  transition: width 0.3s ease-in-out;
+}
+
+h2:hover::after {
+  width: 150px;
+}
+p {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  line-height: 1.8;
+  padding: 10px;
+  background-color: rgba(250, 101, 177, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+}
+.browse-libraries-button a {
+margin-top: 15px;
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #fa65b1;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.browse-libraries-button a:hover {
+  background-color: #ff8c94;
+}
+.container-fluid .item img{
+height: 300px!important;
+}
+.container-fluid .item h4,.container-fluid .item span{
+color: #fa65b1;
+}

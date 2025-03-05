@@ -164,7 +164,7 @@ body {
   width: 20px;
   transform: rotate(45deg);
   
-  background-color: #E65100;
+  background-color: #fa65b1;
 
   box-shadow: 0px 4px 4px 0px #aaa;
   border-radius: 4px;
@@ -177,7 +177,7 @@ body {
   height: 14px;
   width: 14px;
   transform: rotate(45deg);
-  background-color: #E65100;
+  background-color: #fa65b1;
 
   box-shadow: 0px 4px 4px 0px #aaa;
   border-radius: 4px;
@@ -215,7 +215,7 @@ body {
   top: 0;
   width: 1px;
   height: 100%;
-  background-color: #E65100;
+  background-color: #fa65b1;
 
   content: '';
 }
@@ -225,7 +225,7 @@ body {
   top: 66px;
   width: 1px;
   height: 88%;
-  background-color: #E65100;
+  background-color: #fa65b1;
 
   content: '';
   transform: rotate(90deg);
@@ -243,7 +243,7 @@ body {
     padding-top: 7px;
     border: 1px dashed;
   }
-.services .serv h5 {color: #E65100;}
+.services .serv h5 {color: #fa65b1;}
 .services .serv p {color: #777;}
 .services .serv hr {
   width: 30px;
@@ -286,7 +286,7 @@ body {
   }
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    background-color: #0097B2; 
+    background-color: #fa65b1;; 
     border-radius: 50%;
     width: 40px; 
     height: 40px;
@@ -314,17 +314,17 @@ body {
       
     }
     .offers-section .card h5{
-      color:#E65100;
+      color:#fa65b1;
     }
     .featured-product-card {
-        border: 2px solid #0097B2;
+        border: 1px solid #fa65b1;;
         transition: transform 0.3s;
       }
       .featured-product-card h4{
-        color:#E65100!important;
+        color:#fa65b1!important;
       }
       .miniCard h6{
-        color:#E65100!important;
+        color:#fa65b1!important;
       }
       .miniCard button{
         padding:10px 40px!important;
@@ -347,11 +347,11 @@ body {
       
       .card img {
         height: 200px;
-        object-fit: cover;
+        object-fit: contain;
       }
   /* Tab that is not active */
   #productTabs .nav-link {
-    color: #E65100 !important; /* Color of the text when not selected */
+    color: #fa65b1 !important; /* Color of the text when not selected */
     /* Transparent background */
     background-color: transparent;
 
@@ -360,15 +360,25 @@ body {
   /* Tab that is active (selected) */
   #productTabs .nav-link.active {
     color: white !important;
-    background-color: #E65100 !important; 
+    background-color: #fa65b1 !important; 
 
   }
  
   #onsale .card-title{
-    color: #E65100 !important;
+    color: #fa65b1 !important;
+  }
+  #onsale  .card button{
+    background-color: #f2e9e4 !important;
+    color:#fa65b1 !important;
+    border:1px solid #fa65b1 !important;
   }
   #mostview .card-title{
-    color: #E65100 !important;
+    color: #fa65b1!important;}
+
+    #mostview  .card button{
+    background-color: #f2e9e4 !important;
+    color:#fa65b1 !important;
+    border:1px solid #fa65b1 !important;
   }
   .accordion-button:focus {
     outline: 2px solid #E65100; 
@@ -455,19 +465,6 @@ button:hover {
   color: #0097B2; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
   @media (min-width: 1025px) {
   .h-custom-2 {
   height: 100%;
@@ -496,3 +493,31 @@ p.text-muted {
   color: #4A4949;
 }
   
+.ShopNow{
+  background: #f2e9e4;
+  border:1px solid #fa65b1;
+  color:#fa65b1;
+}
+.ShopNow:hover{
+  background: #fa65b1;
+  border:1px solid #f2e9e4;
+  color:#f2e9e4;
+}
+#featuredProductsCarousel .carousel-item .card img{
+  object-fit: cover !important;
+}
+#featuredProductsCarousel .carousel-item .card button{
+  background-color: #f2e9e4;
+  color:#fa65b1;
+  border:1px solid #fa65b1;
+
+}
+#onsale  .card img,#mostview .card img{
+  object-fit: cover !important;
+}
+.testimonial .row .text-center{
+  border-radius: 15px; padding: 15px; background-color: #fff;  box-shadow: 0px 4px 10px #fa65b1; height: 100%;
+}
+.testimonial .row .text-center p{
+  color:#fa65b1;
+}

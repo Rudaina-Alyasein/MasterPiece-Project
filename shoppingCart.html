@@ -16,10 +16,10 @@
         color: rgb(77, 76, 76);
     }
     .summary-item h6{
-        margin-top: 6px; color: #E65100;font-size: 18px;
+        margin-top: 6px; color: #fa65b1;;font-size: 18px;
     }
     #payment-form .form-check-label{
-        color: #E65100;
+        color: #fa65b1;;
     }
     #credit-card-info label{
         color: rgb(77, 76, 76);
@@ -44,67 +44,83 @@ background-color: #007a8e;
 
 </head>
 <body>
-      <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <!-- Logo on the left -->
-        <a class="navbar-brand" href="#"><img src="assets\img\logo7.png" style="height: 50px; width:200px; z-index: 1000; " ></a>
-    
-        <!-- Toggle button for mobile view -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <!-- Navbar content with items centered in larger screens -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left and center links, ensure these are centered -->
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="about.html">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="Location.html">Libraries</a>
-            </li>
+         <!-- Navbar after login -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- Logo on the left -->
+      <a class="navbar-brand" href="#"><img src="assets/img/logo7.png" style="height: 50px; width:200px; z-index: 1000;"></a>
+
+      <!-- Toggle button for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar content with items centered in larger screens -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left and center links -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="about.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Location.html">Libraries</a>
+          </li>
+         
+          <!-- Add Join Us link -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="RegisterLibrary.html">Join Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contactus.html">Contact us</a>
+          </li>
+           <!-- Add Terms and Conditions link -->
+           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Terms&Conditions.html">Terms & Conditions</a>
+          </li>
+        </ul>
+
+        <!-- Right side (Cart, Notifications, Profile, Sign In) -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- Notifications Icon -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-bell" style="font-size: 24px; margin-top: 7px;"></i>
+              <span class="badge bg-danger" style="background-color: #fa65b1!important;">3</span> <!-- Example: Number of notifications -->
+            </a>
+          </li>
+          <!-- Cart Icon -->
+          <li class="nav-item">
+            <a href="shoppingCart.html" class="nav-link">
+              <i class="fa fa-shopping-cart" style="font-size: 24px; margin-top: 7px;"></i>
+              <span class="badge bg-success" style="background-color: #fa65b1!important;">2</span> <!-- Example: Number of items in cart -->
+            </a>
+          </li>
+          <!-- Favorite Icon -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-heart" style="font-size: 24px; margin-top: 7px;"></i>
+            </a>
+          </li>
+          <!-- Profile Image -->
+          <li class="nav-item">
+            <a href="profile-user.html" class="nav-link">
+              <img src="assets/img/avatar.jpg" alt="Profile" class="rounded-circle" style="width: 35px; height: 35px;">
+            </a>
+          </li>
           
-             <!-- Add Join Us link -->
-             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="RegisterLibrary.html">Join Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="contactus.html">Contact us</a>
-            </li>
-           
-            <!-- Add Terms and Conditions link -->
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="Terms&Conditions.html">Terms & Conditions</a>
-            </li>
-          </ul>
-    
-          <!-- Right side (Cart, Sign In, Profile) -->
-          <ul class="navbar-nav d-flex justify-content-center mb-2 mb-lg-0 right-nav">
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="fa fa-shopping-cart" style="font-size: 24px;  margin-top: 7px; display: none;"></i> <!-- Cart Icon -->
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <img src="assets\img\avatar.jpg" alt="Profile" class="rounded-circle" style="width: 35px; height: 35px; display: none;"> <!-- Profile Image -->
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <button class="btn btn-outline-primary" id="signInBtn" style="font-size:18px; color: #eee;">Sign In</button> 
-              </a>
-            </li>
-          </ul>
-    
-        </div>
+          <!-- Sign In Button (visible only when not logged in) -->
+          <li class="nav-item" id="signInBtnContainer" style="display: none;">
+            <a href="#" class="nav-link">
+              <button class="btn btn-outline-primary" id="signInBtn" style="font-size:18px; color: #eee;">Sign In</button>
+            </a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
     
       
   <!-- shopping cart -->
@@ -128,7 +144,7 @@ background-color: #007a8e;
                 </div>
                  <!-- زر الحذف مع أيقونة X -->
                     <button class="btn btn-danger btn-sm ms-auto" onclick="removeItem(this)" style="border: none; background: transparent;">
-                        <i class="fas fa-times" style="color: #E65100;"></i> <!-- X icon with red color -->
+                        <i class="fas fa-times" style="color: #fa65b1;"></i> <!-- X icon with red color -->
                     </button>
 
             </div>
@@ -147,7 +163,7 @@ background-color: #007a8e;
                 </div>
                  <!-- زر الحذف مع أيقونة X -->
                     <button class="btn btn-danger btn-sm ms-auto" onclick="removeItem(this)" style="border: none; background: transparent;">
-                        <i class="fas fa-times" style="color: #E65100;"></i> <!-- X icon with red color -->
+                        <i class="fas fa-times" style="color: #fa65b1;;"></i> <!-- X icon with red color -->
                     </button>
 
             </div>
@@ -163,7 +179,7 @@ background-color: #007a8e;
                 </div>
                 <div class="summary-item d-flex justify-content-start ">
                     <h4>Total:</h4>
-                    <h6 class=" ms-2" style="margin-top: 6px; color: #E65100;font-size: 18px;">$25</h6>
+                    <h6 class=" ms-2" style="margin-top: 6px; color: #fa65b1;;font-size: 18px;">$25</h6>
                 </div>
             </div>
         </div>
@@ -218,7 +234,7 @@ background-color: #007a8e;
 </section>
 <!-- Footer Section -->
 <div class="container my-5">
-    <footer class="bg-dark text-center text-lg-start text-white py-5">
+    <footer class="text-center text-lg-start text-white py-5">
       <div class="container p-4">
         <div class="row justify-content-center my-4">
           <!-- Logo Section -->

@@ -8,77 +8,12 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
   <link rel="stylesheet"href="assets\style\nav.css">
+    <link rel="stylesheet"href="assets\style\location.css">
+
   <!-- <link rel="stylesheet"href="style.css"> -->
 
 
-  <style>
 
-
-
-     .hero{ background: url('assets/img/tess4.jpeg') center/cover no-repeat;
-      height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #0097b2;
-    }
-    .hero p {
-      font-size: 1.8rem;
-      color: #59595b;
-    }
-    .hero #detectLocation{
-      background-color: #0097b2;
-      color: #fff;
-      border: none;
-      padding: 20px 30px;
-      font-size: 18px;
-    }
-    /* الكروت */
-    #bookstoreList .card {
-      background-color: #f2e9e4;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    #bookstoreList .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
-    #bookstoreList .card-title{
-      color: #E65100;
-    }
-    #bookstoreList .card-text strong{
-      color: #e65100;
-    }
-    #bookstoreList .card-text {
-      color: #59595b;
-    }
-    #bookstoreList .btn{
-      background-color: #0097b2;
-      color: #fff;
-      border: none !important;
-      padding: 10px 20px;
-      font-size: 18px;
-    }
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .input-group.SearchInput input:focus{
-      box-shadow: 0 0 5px #0097b2  !important;
-      border: #0097b2 !important;
-    }
-  </style>
 </head>
 <body>
   <!-- navbar -->
@@ -146,7 +81,7 @@
   <!-- قسم الهيرو -->
   <section class="hero text-center">
     <div>
-      <h1>Discover Local Bookstores</h1>
+      <h1>Discover Local library</h1>
       <p>Find the best bookstores near you with just one click!</p>
       <button id="detectLocation" class="btn btn-light px-4 py-2 mt-3">Detect Nearest Libraries</button>
     </div>
@@ -166,13 +101,12 @@
     </div>
     <div id="bookstoreList" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
   </div>
-        <!-- Footer Section -->
+<!-- Footer Section -->
 <div class="container my-5">
-  <footer class="bg-dark text-center text-lg-start text-white py-5">
+  <footer class=" text-center text-lg-start text-white py-5">
     <div class="container p-4">
       <div class="row justify-content-center my-4">
         <!-- Logo Section -->
-      <div class="row"> <!-- إضافة صف لتوزيع الأعمدة -->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
           <img src="assets\img\logo3.png" alt="Logo" loading="lazy" style="width: 250px; margin-bottom: 20px;" />
           <p>Your platform for local bookstores and stationery.</p>
@@ -222,11 +156,10 @@
     </div>
   </footer>
 </div>
-
   <script>
     // بيانات المكتبات (يمكنك تعديلها أو إضافة بيانات حقيقية من قاعدة بيانات)
     const bookstores = [
-      { id: 1, name: "City Bookstore", address: "329 Main St", latitude: 40.748817, longitude: -73.985428, image:"assets/img/library3.jpg" },
+      { id: 1, name: "Alyaqeen Library", address: "329 Main St", latitude: 40.748817, longitude: -73.985428, image:"assets/img/library3.jpg" },
       { id: 2, name: "Library Corner", address: "654 Library Ave", latitude: 40.742674, longitude: -73.987118, image:"assets/img/library1.jpg" },
       { id: 3, name: "Book Haven", address: "987 Book Blvd", latitude: 40.752774, longitude: -73.982779, image:"assets/img/library2.jpg" },
       {id: 4, name: "City Bookstore", address: "329 Main St", latitude: 40.748817, longitude: -73.985428, image:"assets/img/library4.jpg" },
@@ -264,7 +197,8 @@
         
         const addressPara = document.createElement('p');
         addressPara.classList.add('card-text');
-        addressPara.innerHTML = `<strong>Address:</strong> ${store.address}`;
+        addressPara.innerHTML = `<strong style ="color:gray">Address:</strong> ${store.address}`;
+        
         
         const btn = document.createElement('a');
         btn.classList.add('btn', 'btn-primary', 'btn-sm');

@@ -15,67 +15,83 @@
 </head>
 
 <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <!-- Logo on the left -->
-        <a class="navbar-brand" href="#"><img src="assets\img\logo7.png" style="height: 50px; width:200px; z-index: 1000; " ></a>
-    
-        <!-- Toggle button for mobile view -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <!-- Navbar content with items centered in larger screens -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left and center links, ensure these are centered -->
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="about.html">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="Location.html">Libraries</a>
-            </li>
+        <!-- Navbar after login -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- Logo on the left -->
+      <a class="navbar-brand" href="#"><img src="assets/img/logo7.png" style="height: 50px; width:200px; z-index: 1000;"></a>
+
+      <!-- Toggle button for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar content with items centered in larger screens -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left and center links -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="about.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Location.html">Libraries</a>
+          </li>
+         
+          <!-- Add Join Us link -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="RegisterLibrary.html">Join Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contactus.html">Contact us</a>
+          </li>
+           <!-- Add Terms and Conditions link -->
+           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Terms&Conditions.html">Terms & Conditions</a>
+          </li>
+        </ul>
+
+        <!-- Right side (Cart, Notifications, Profile, Sign In) -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- Notifications Icon -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-bell" style="font-size: 24px; margin-top: 7px;"></i>
+              <span class="badge bg-danger" style="background-color: #fa65b1!important;">3</span> <!-- Example: Number of notifications -->
+            </a>
+          </li>
+          <!-- Cart Icon -->
+          <li class="nav-item">
+            <a href="shoppingCart.html" class="nav-link">
+              <i class="fa fa-shopping-cart" style="font-size: 24px; margin-top: 7px;"></i>
+              <span class="badge bg-success" style="background-color: #fa65b1!important;">2</span> <!-- Example: Number of items in cart -->
+            </a>
+          </li>
+          <!-- Favorite Icon -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-heart" style="font-size: 24px; margin-top: 7px;"></i>
+            </a>
+          </li>
+          <!-- Profile Image -->
+          <li class="nav-item">
+            <a href="profile-user.html" class="nav-link">
+              <img src="assets/img/avatar.jpg" alt="Profile" class="rounded-circle" style="width: 35px; height: 35px;">
+            </a>
+          </li>
           
-             <!-- Add Join Us link -->
-             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="RegisterLibrary.html">Join Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="contactus.html">Contact us</a>
-            </li>
-           
-            <!-- Add Terms and Conditions link -->
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="Terms&Conditions.html">Terms & Conditions</a>
-            </li>
-          </ul>
-    
-          <!-- Right side (Cart, Sign In, Profile) -->
-          <ul class="navbar-nav d-flex justify-content-center mb-2 mb-lg-0 right-nav">
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="fa fa-shopping-cart" style="font-size: 24px;  margin-top: 7px; display: none;"></i> <!-- Cart Icon -->
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <img src="assets\img\avatar.jpg" alt="Profile" class="rounded-circle" style="width: 35px; height: 35px; display: none;"> <!-- Profile Image -->
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <button class="btn btn-outline-primary" id="signInBtn" style="font-size:18px; color: #eee;">Sign In</button> 
-              </a>
-            </li>
-          </ul>
-    
-        </div>
+          <!-- Sign In Button (visible only when not logged in) -->
+          <li class="nav-item" id="signInBtnContainer" style="display: none;">
+            <a href="#" class="nav-link">
+              <button class="btn btn-outline-primary" id="signInBtn" style="font-size:18px; color: #eee;">Sign In</button>
+            </a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
     
       
     <!-- profile section -->
@@ -390,62 +406,61 @@
       </div>
     </div>
   </div>
-  <!-- Footer Section -->
+<!-- Footer Section -->
 <div class="container my-5">
-    <footer class="bg-dark text-center text-lg-start text-white py-5">
-      <div class="container p-4">
-        <div class="row justify-content-center my-4">
-          <!-- Logo Section -->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
-            <img src="assets\img\logo3.png" alt="Logo" loading="lazy" style="width: 250px; margin-bottom: 20px;" />
-            <p>Your platform for local bookstores and stationery.</p>
-            <ul class="list-unstyled d-flex flex-row justify-content-center mt-3">
-              <li><a class="text-white px-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-facebook-square"></i></a></li>
-              <li><a class="text-white px-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a></li>
-              <li><a class="text-white ps-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a></li>
-            </ul>
-          </div>
-  
-          <!-- Shop Categories -->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Shop Categories</h5>
-            <ul class="list-unstyled">
-              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-book pe-3"></i>Books</a></li>
-              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-pencil-alt pe-3"></i>Stationery</a></li>
-              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-cart-plus pe-3"></i>Shop Now</a></li>
-            </ul>
-          </div>
-  
-          <!-- Customer Service -->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Customer Service</h5>
-            <ul class="list-unstyled">
-              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-truck pe-3"></i>Delivery Info</a></li>
-              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-phone pe-3"></i>Contact Us</a></li>
-              <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-question-circle pe-3"></i>FAQ</a></li>
-            </ul>
-          </div>
-  
-          <!-- Contact -->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Contact</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2"><i class="fas fa-map-marker-alt pe-2"></i>Irbid, Jordan</li>
-              <li class="mb-2"><i class="fas fa-phone pe-2"></i>+123 456 789</li>
-              <li><i class="fas fa-envelope pe-2"></i>StationerySpot@Stationery.com</li>
-            </ul>
-          </div>
+  <footer class=" text-center text-lg-start text-white py-5">
+    <div class="container p-4">
+      <div class="row justify-content-center my-4">
+        <!-- Logo Section -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
+          <img src="assets\img\logo3.png" alt="Logo" loading="lazy" style="width: 250px; margin-bottom: 20px;" />
+          <p>Your platform for local bookstores and stationery.</p>
+          <ul class="list-unstyled d-flex flex-row justify-content-center mt-3">
+            <li><a class="text-white px-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a class="text-white px-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a></li>
+            <li><a class="text-white ps-2" href="#!" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- Shop Categories -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Shop Categories</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-book pe-3"></i>Books</a></li>
+            <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-pencil-alt pe-3"></i>Stationery</a></li>
+            <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-cart-plus pe-3"></i>Shop Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Customer Service</h5>
+          <ul class="list-unstyled">
+            <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-truck pe-3"></i>Delivery Info</a></li>
+            <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-phone pe-3"></i>Contact Us</a></li>
+            <li><a href="#!" class="text-white d-flex align-items-center" style="text-decoration: none;"><i class="fas fa-question-circle pe-3"></i>FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Contact</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-map-marker-alt pe-2"></i>Irbid, Jordan</li>
+            <li class="mb-2"><i class="fas fa-phone pe-2"></i>+123 456 789</li>
+            <li><i class="fas fa-envelope pe-2"></i>StationerySpot@Stationery.com</li>
+          </ul>
         </div>
       </div>
-  
-      <!-- Footer Bottom -->
-      <div class="text-center py-3" style="background-color: rgba(0, 0, 0, 0.2); font-size: 0.9rem;">
-        © 2025 Copyright: 
-        <a href="#!" class="text-white" style="text-decoration: none;">Stationery Spot</a>
-      </div>
-    </footer>
-  </div>
-  
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center py-3" style="background-color: rgba(0, 0, 0, 0.2); font-size: 0.9rem;">
+      © 2025 Copyright: 
+      <a href="#!" class="text-white" style="text-decoration: none;">Stationery Spot</a>
+    </div>
+  </footer>
+</div>
   
   <script>
     
